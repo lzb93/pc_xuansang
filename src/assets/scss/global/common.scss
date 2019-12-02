@@ -1,0 +1,54 @@
+body {
+    overflow-x: hidden;
+    font-family: "Microsoft YaHei";
+    -webkit-font-smoothing: antialiased;
+    font-size: $font-size-16;
+    color: $font-color-70;
+    line-height: 1.414;
+}
+dd, dl, dt, p, nav, div, ul,li, header, h1, h2, h3, h4, h5, h6,iframe, button{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
+li{
+    cursor: default;
+}
+input{
+    color: #666;
+}
+a{
+    color: #707070;
+    text-decoration:  none;
+    // -webkit-tap-highlight-color: transparent;
+    // transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    &:hover {
+      color: #333;
+    }
+}
+
+ul, li{
+    list-style: none;
+}
+
+::-webkit-input-placeholder{
+    color: #c0c0c0;
+    font-size: $font-size-14;
+}
+::-moz-placeholder{
+    color: #c0c0c0;
+    font-size: $font-size-14;
+}
+:-ms-input-placeholder{
+    color: #c0c0c0;
+    font-size: $font-size-14;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+

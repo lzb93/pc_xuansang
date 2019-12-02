@@ -1,0 +1,34 @@
+stages:
+  - deploy
+  
+# 变量
+variables:
+  WWW_ROOT: "/home/wwwroot"
+  GIT_PATH: "meila/meigongpuzi_front"
+
+develop_job:
+  stage: deploy
+  tags:
+    - 131-runner
+
+  only:
+    - develop
+  script: 
+    - ~/gitlab-scripts/site-upd.sh "$GIT_PATH" "$WWW_ROOT/meigongpuzi_front.develop" develop
+    - cd "$WWW_ROOT/meigongpuzi_front.develop"
+    - npm install
+    - npm run devp
+    
+master_job:
+  stage: deploy
+  tags:
+    - 131-runner
+
+  only:
+    - master
+  script: 
+    - ~/gitlab-scripts/site-upd.sh "$GIT_PATH" "$WWW_ROOT/meigongpuzi_front.master" master
+    - cd "$WWW_ROOT/meigongpuzi_front.master"
+    - npm install
+    - npm run build
+  

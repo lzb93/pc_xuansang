@@ -1,0 +1,155 @@
+@import "./global/variables";
+@import './global/common';
+@import './global/normalize';
+
+html, body {
+  background-color: #fff;
+}
+* {
+  box-sizing:border-box;
+  -moz-box-sizing:border-box; /* Firefox */
+  -webkit-box-sizing:border-box; /* Safari */
+}
+
+// 字体图标引入样式
+@font-face {
+  font-family: 'iconfont';  /* project id 770955 */
+  src: url('//at.alicdn.com/t/font_770955_gp8oem2k6vi.eot');
+  src: url('//at.alicdn.com/t/font_770955_gp8oem2k6vi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_770955_gp8oem2k6vi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_770955_gp8oem2k6vi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_770955_gp8oem2k6vi.svg#iconfont') format('svg');
+}
+
+.iconfont{
+  font-family: "iconfont" !important;
+  font-size: $font-size-16;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.color_main {
+  color: $main-color !important;
+}
+
+// 左右浮动
+.left {
+  float: left !important;
+}
+.right {
+  float: right !important;
+}
+
+// flex布局
+.flex_row {
+  display: flex;
+  flex-direction: row wrap;
+  flex-wrap: wrap;
+}
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.align_items {
+  display: flex;
+  align-items: baseline;
+}
+
+// 超出隐藏
+.tx_ov{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tx_ov2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+// 公用样式
+.layout {
+  min-width: $min-width;
+  text-align: center;
+  .lay_title {
+    font-size: $font-size-30;
+    font-weight: bold;
+    color: $font-color-28;
+  }
+  .lay_sec_title {
+    position: relative;
+    margin-top: 5px;
+    font-size: $font-size-14;
+    color: $font-color-88;
+    span {
+      z-index: 3;
+      position: relative;
+      display: inline-block;
+      padding: 0 10px;
+      background-color: #fff;
+    }
+    .line {
+      z-index: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 180px;
+      height: 1px;
+      background-color: $font-color-28;
+    }
+  }
+  .lay_menu {
+    display: inline-block;
+    margin: 20px 0 30px;
+    padding: 5px 20px;
+    text-align: center;
+    border-radius: $border-radius-round;
+    box-shadow: 0 2px 5px 2px $box-shadow-f1;
+    li {
+      overflow: hidden;
+      float: left;
+      padding: 2px;
+      border: 1px solid transparent;
+      font-size: $font-size-14;
+      border-radius: $border-radius-round;
+      cursor: pointer;
+      &:hover {
+        color: $main-color;
+      }
+      &.active {
+        border: 1px solid $main-color;
+        & > div {
+          background-color: $main-color;
+          color: #fff;
+        }
+      }
+      & > div {
+        padding: 5px 40px;
+        border-radius: $border-radius-round;
+        &.active {
+          background-color: $main-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+}
+
+.index_wrap {
+  padding-top: $header-height;
+}
+.wrap {
+  padding-top: 110px;
+}

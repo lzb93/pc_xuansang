@@ -1,0 +1,71 @@
+@import "../../assets/scss/global/variables";
+
+.integral_wrap {
+  background-color: #FAFAFA;
+  .mall_wrap {
+    width: $min-width;
+    margin: 0 auto;
+    .mall_nav {
+      width: 15%;
+      min-height: 245px;
+      margin-top: 60px;
+      border: 1px solid #EEEEEE;
+      background-color: #fff;
+      li {
+        padding: 10px 0;
+        border-left: 3px solid transparent;
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+          color: $main-color;
+        }
+        &.active {
+          border-color: $main-color;
+          color: $main-color;
+          background-color: #F8F8F8;
+        }
+      }
+    }
+    .mall_main {
+      min-height: 581px;
+      width: 81%;
+      font-size: 14px;
+      .title {
+        height: 60px;
+        line-height: 60px;
+        padding: 0 5px;
+        font-size: 24px;
+        span {
+          color: $main-color;
+        }
+      }
+      .item {
+        width: 280px;
+        margin: 0 5px 20px;
+        cursor: pointer;
+        &:hover .item_content {
+          background-color: #fff;
+        }
+        .item_img {
+          display: block;
+          width: 100%;
+          height: 280px;
+          border: 2px solid #E5E5E5;
+        }
+        .item_content {
+          padding: 10px;
+        }
+        p {
+          padding: 10px 0;
+        }
+        .item_inte {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+.footer_page {
+  padding: 20px 0;
+  text-align: center;
+}

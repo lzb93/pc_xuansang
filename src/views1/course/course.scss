@@ -1,0 +1,33 @@
+@import"../../assets/scss/global/variables";
+.video_detail_wrap {
+    background-color: #F6F6F6;
+}
+.all_wrap {
+    width: 1440px;
+    background-color: #fff;
+    margin: 90px auto 50px;
+    border: 1px solid transparent;
+    .header{
+        text-align: center;
+        padding-top: 44px;
+        color: #282828;
+        .line {
+            background-color: #000;
+            width: 102px;
+            height: 6px;
+            margin: 30px auto;
+        }
+        .teaching{
+            display: block;
+            width: 1070px;
+            height: 560px;
+            background-color: #000;
+            margin: 0 auto;
+        }
+
+    }
+    .content_wrap {
+        margin: 50px auto;
+    }
+
+}

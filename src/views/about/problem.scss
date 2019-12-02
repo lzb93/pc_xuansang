@@ -1,0 +1,33 @@
+@import "../../assets/scss/global/variables";
+.problem_wrap {
+    width: 1200px;
+    margin: 25px auto;
+    min-height: 500px;
+    position: relative;
+    .number {
+        color: $main-color;
+    }
+    .el-collapse {
+        border: none;
+    }
+    .el-collapse-item__header {
+        border: none !important;
+    }
+    .el-collapse-item__wrap {
+        border: none !important;
+    }
+    .problem_content {
+        padding: 10px 0;
+        text-indent: 20px;
+        background-color: $main-color;
+        color: #fff;
+    }
+    .page {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        margin: 15px auto;
+        text-align: center;
+
+    }
+}

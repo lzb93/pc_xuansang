@@ -1,0 +1,38 @@
+@import "../../assets/scss/global/variables";
+
+.message_container {
+  background-color: #fff;
+}
+.message_wrap {
+  width: $min-width;
+  padding: $header-height 60px 0;
+  margin: 0 auto;
+  .item_message {
+    padding: 25px 0;
+    border-bottom: 1px solid #DCDCDC;
+    .icon_message {
+      padding: 12px 50px;
+      i {
+        font-size: 20px;
+      }
+    }
+    .item_main {
+      max-width: 1100px;
+      .title {
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+      span {
+        font-size: 14px;
+        color: #999;
+        &.color {
+          color: $main-color;
+        }
+      }
+    }
+    .item_system {
+      font-size: 14px;
+      text-align: right;
+    }
+  }
+}

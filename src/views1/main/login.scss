@@ -1,0 +1,52 @@
+@import "../../assets/scss/global/variables";
+
+.login_wrap {
+  position: relative;
+  min-width: $min-width;
+  min-height: 596px;
+  font-size: 14px;
+  background: url('../../assets/images/login_bg.png') center center no-repeat;
+  background-size: cover;
+  .login_inner {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translate(0, -50%);
+    width: 400px;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 6px;
+    .login_header {
+      padding: 10px 20%;
+      border-bottom: 1px solid #E2E2E2;
+      font-size: 20px;
+      .active {
+        color: $main-color;
+      }
+    }
+    .login_body {
+      padding: 22px 0;
+      .input_code {
+        position: relative;
+        .el-input__inner {
+          padding-right: 100px;
+        }
+        .btn_code {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100px;
+          text-align: center;
+        }
+      }
+    }
+    .login_footer {
+      .icon_check {
+        vertical-align: middle;
+        &.active {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}

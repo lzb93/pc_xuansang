@@ -1,0 +1,93 @@
+@import"../../assets/scss/global/variables";
+.video_wrap {
+  min-height: 650px;
+  padding: 72px;
+  background-color: #fff;
+  position: relative;
+}
+.new_teaching {
+    width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+    h2{
+        color: #282828
+    }
+    .page {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+    }
+    .list_wrap {
+        width: 1440px;
+        margin: 50px auto;
+        .list_item {
+            position: relative;
+            width: 320px;
+            margin: 0 40px 20px 0;
+            border: 1px solid #EEE;
+            border-radius: 10px ;
+            .new_item_img{
+                display: block;
+                width: 100%;
+                border-radius: 10px 10px 0 0;
+            }
+            &>p{
+                width: 100%;
+                margin: 8px auto;
+                padding: 0 20px;
+            }
+            .hide {
+                position:absolute;
+                top: 0;
+                left: 0;
+                bottom:0;
+                width: 100%;
+                border-radius: 10px;
+                background:rgba(0, 0, 0,  0.3)
+            }
+           
+        }
+        
+    }
+    .small_title {
+        position: relative;
+        display: inline-block;
+        padding: 10px 50px;
+        text-align: center;
+        .line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #555;
+        }
+        .text {
+            z-index: 3;
+            position: relative;
+            display: inline-block;
+            padding: 0 20px;
+            background-color: #fff;
+        }
+    }
+}
+
+
+.list_item  .hide>img{
+    position: absolute;
+    right: 10px;
+    bottom: 50px;
+    width: 60px;
+}
+.hide{
+    display: none;
+}
+.list_item:hover  .hide{
+    display: block;
+}
+ // 底部
+ .footer_page {
+    padding: 40px 0;
+    text-align: center;
+  }
+ 

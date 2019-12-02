@@ -1,0 +1,291 @@
+@import "../../assets/scss/global/variables";
+
+.home_wrap {
+  padding-top: $header-height;
+  min-width: $min-width;
+}
+.search_container {
+  text-align: center;
+  background-color: #fff;
+}
+.search_wrap {
+  display: inline-block;
+  font-size: 0;
+  text-align: center;
+  .search_nav {
+    padding: 0 25px;
+    & > div {
+      float: left;
+      width: 70px;
+      height: 24px;
+      line-height: 24px;
+      font-size: $font-size-12;
+      text-align: center;
+      cursor: pointer;
+      &.active {
+        color: #fff;
+        background: url('../../assets/images/icon_search_bg.png') center center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  .search_inner {
+    overflow: hidden;
+    border: 1px solid $main-color;
+    border-radius: $border-radius-round;
+    .input {
+      width: 700px;
+      // line-height: 47px;
+      padding: 13px 25px;
+      border: 0;
+      outline: none;
+      font-size: $font-size-18;
+    }
+    .btn_search {
+      width: 100px;
+      padding: 13px 0;
+      // line-height: 48px;
+      // background: url('../../assets/images/btn_search.png') center center no-repeat;
+      // background-size: contain;
+      background: linear-gradient(to right, $change-start , $change-end);
+      i {
+        color: #fff;
+      }
+    }
+  }
+  .search_menu {
+    padding: 10px 25px;
+    ul > li {
+      float: left;
+      font-size: $font-size-12;
+      margin: 0 20px;
+      cursor: pointer;
+    }
+  }
+  .search_gif {
+    padding: 5px 0;
+    img {
+      display: inline-block;
+      width: 80px;
+      font-size: 0;
+      margin-left: 40px;
+    }
+  }
+}
+
+.swiper-container.banner_wrap {
+  width: 100%;
+  margin: 0 auto 40px;
+  .swiper-slide {
+    width: 100%;
+    margin: 0;
+    background-color: #f5f5f5;
+    border-radius: 0;
+    border: 0;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .swiper-pagination-bullet {
+    // background-color: #9F9F9F !important;
+    &.swiper-pagination-bullet-active {
+      width: 22px;
+      border-radius: $border-radius-round;
+      background-color: #fff !important;
+    }
+  }
+}
+.moudle_wrap {
+  // display: none;
+  margin-bottom: 40px;
+  .swiper-slide {
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    cursor: pointer;
+    &:hover .item_content {
+      display: block;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+    .item_content {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000, $alpha: 0.2);
+      text-align: center;
+      .item_inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 230px;
+        padding: 0 20px;
+        transform: translate(-50%, -50%);
+        color: #fff;
+      }
+      h1 {
+        padding: 0 10px;
+        margin-bottom: 5px;
+        font-size: 20px;
+        font-weight: normal;
+      }
+    }
+  }
+}
+.swiper-container.normal_wrap {
+  width: $min-width;
+  margin: 0 auto;
+  &:hover .btn_weiper {
+    display: block;
+  }
+  .swiper-slide {
+    border: 0 !important;
+  }
+  .btn_weiper {
+    display: none;
+    & > div {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: rgba($color: #fff, $alpha: 0.5);
+      &:hover {
+        background-color: rgba($color: #fff, $alpha: 0.8);
+      }
+    }
+    .swiper-button-disabled {
+      display: none;
+    }
+  }
+
+  .item {
+    overflow: hidden;
+    // width: 340px;
+    // padding: 20px 15px;
+    border-radius: $border-radius-10;
+    background-color: #F6F6F6;
+    box-shadow: 0 0 5px 0 rgba($color: #555555, $alpha: 0.1);
+    cursor: pointer;
+    &:hover .control_wrap {
+      display: block;
+    }
+    .img {
+      display: block;
+      width: 100%;
+      border-radius: $border-radius-10;
+    }
+  }
+}
+.more {
+  padding: 15px 0 30px;
+  text-align: center;
+  font-size: $font-size-14;
+  a {
+    color: $font-color-88;
+    border: 1px solid #888;
+    border-radius: 22px;
+    padding: 5px 15px 5px 21px;
+  }
+}
+.control_wrap {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 20px;
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  font-size: 16px;
+  .btn_download {
+    z-index: 9;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 10px 25px;
+    color: #fff;
+    text-align: center;
+    border-radius: $border-radius-round;
+    background: linear-gradient(to right, $change-start , $change-end);
+  }
+  p {
+    width: 228px;
+    text-align: left;
+    color: #fff;
+    line-height: 42px;
+  }
+}
+//模块
+.small_title{
+  position: relative;
+  display: inline-block;
+  padding: 10px 50px;
+
+  &>span{
+    position: relative;
+    z-index: 3;
+    padding: 10px 10px;
+    background-color: #fff;
+  }
+  &>.line{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+  }
+}
+.side_position {
+  z-index: 3;
+  position: absolute;
+  top: 180px;
+  right: -90px;
+  .side_plane {
+    position: absolute;
+    top: 0;
+    right: -13px;
+    width: 100px;
+    margin-top: -66px;
+
+  }
+  .side_wrap {
+    width: 70px;
+    padding: 25px 0;
+    border: 1px solid #D8D8D8;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: #fff;
+    .side_item {
+      text-align: center;
+      .icon_font {
+        margin-bottom: 3px;
+        font-size: 24px;
+      }
+      & + .side_item {
+        margin-top: 25px;
+      }
+    }
+  }
+}
+.el_dialog {
+  .el-dialog {
+    height: 256px;
+    background-color: transparent;
+    box-shadow: none;
+    background: url('../../assets/images/sign_in_bg.png') center center no-repeat;
+    background-size: contain;
+  }
+}
+.swiper-button-prev {
+  background-image: url(../../assets/images/right_icon.png)
+}
+.swiper-button-next {
+  background-image: url(../../assets/images/left_icon.png)
+}

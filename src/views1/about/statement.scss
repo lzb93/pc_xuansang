@@ -1,0 +1,23 @@
+@import "../../assets/scss/global/variables";
+.statement_wrap {
+    width: $min-width ;
+    padding-top:29px; 
+    margin: auto;
+    .statement_list {
+        width: 15%;
+        li {
+            padding-bottom: 20px ;
+            cursor: pointer;
+        }
+        li.active {
+            color: $main-color;
+        }
+    }
+    .statement_content {
+        width: 85%;
+        min-height: 500px;
+        padding: 20px;
+        background-color: #fff;
+        margin-bottom: 30px;
+    }
+}

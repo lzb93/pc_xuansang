@@ -1,0 +1,191 @@
+@import"../../assets/scss/global/variables";
+
+.type_container {
+  padding-top: 72px;
+  background-color: #fff;
+  .content_wrap {
+    width: $min-width;
+    margin: 0 auto;
+  }
+  .screen_wrap {
+      font-size:14px;
+      padding: 15px 20px 0;
+      border-radius: 4px;
+      background: #fff;
+      box-shadow:0 3px 10px 0 #e5e5e5;
+    .screen_first{
+      line-height: 26px;
+      .screen_item {
+        line-height: 24px;
+        padding: 0 10px;
+        border: 1px dotted $main-color;
+        border-radius: $border-radius-round;
+        color: $main-color;
+        a {
+          color: $main-color;
+          margin-left: 3px;
+        }
+      }
+      .iconfont {
+        vertical-align: middle;
+      }
+    }
+    .screen_second {
+      padding: 20px 0;
+      p{
+        width: 45px;
+        line-height: 31px;
+      }
+      ul {
+        margin-left: 45px;
+        li{
+          margin: 0 20px 10px;
+          border-radius:20px;
+          text-align: center;
+          padding: 6px 0;
+          cursor: pointer;
+          &:hover {
+            color: $main-color;
+          }
+          &.active{
+            color: #fff;
+            padding: 6px 16px;
+            background: -webkit-linear-gradient(to right, $change-start , $change-end); /* Safari 5.1 - 6.0 */
+            background: -o-linear-gradient(to right, $change-start, $change-end); /* Opera 11.1 - 12.0 */
+            background: -moz-linear-gradient(to right, $change-start, $change-end); /* Firefox 3.6 - 15 */
+            background: linear-gradient(to right, $change-start , $change-end); /* 标准的语法 */
+          }
+        }
+      }
+    }
+  }
+  .sort{
+    margin-left: 160px;
+    padding: 20px 0;
+    font-size: 14px;
+   li{
+     float:left;
+     padding: 0 20px;
+     a {
+       color: $font-color-70;
+       &.active {
+         color: $main-color;
+       }
+     }
+     &:hover a{
+      color: $main-color;
+    }
+   }
+  }
+  .screen_list {
+    border-top:1px solid #E1E1E1;
+    .search_item {
+      position: relative;
+      width: 120px;
+      text-align: center;
+      div {
+        a {
+          display: block;
+          padding: 20px 0;
+          color: $font-color-70;
+          span {
+            color: $main-color;
+          }
+        }
+      }
+      &:hover ul {
+        display: block;
+      }
+      ul {
+        display: none;
+      }
+    }
+    .search_item_hover {
+      z-index: 3;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding: 5px;
+      background-color: #fff;
+      box-shadow: 0 0 20px 0 rgba($color: #000000, $alpha: 0.15);
+      li{
+        a {
+          display: block;
+          padding: 8px 0;
+          color: $font-color-70;
+          border-radius: 500px;
+          &:hover {
+            color: $main-color;
+          }
+          &.active {
+            background-color: $main-color;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  // 下一页
+  .next_one {
+    margin-right: 20px;
+    color: $main-color;
+    span{
+      color: #8F8E8D;
+    }
+  }
+  .btn_page {
+    &:hover {
+      color: $main-color;
+    }
+    & + .btn_page {
+      margin-left: 10px;
+    }
+  }
+  .main_wrap {
+    width: $min-width;
+    margin: 30px auto 0;
+    .item {
+      border-radius: 6px;
+      background-color: #fff;
+      box-shadow: 0 3px 10px 0 rgba($color: #555555, $alpha: 0.1);
+      .item_hover {
+        overflow: hidden;
+        position: relative;
+        border-radius: 6px 6px 0 0;
+        &:hover .hover_content {
+          display: block;
+        }
+        .hover_content {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($color:#555555, $alpha: 0.2);
+          .btn_download {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+      .text {
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  // 底部
+  .footer_page {
+    padding: 10px 0 40px;
+    text-align: center;
+  }
+}
+

@@ -1,0 +1,27 @@
+@import "../../assets/scss/global/variables";
+.opinion_wrap{
+    margin: 0 auto 0;
+    width: 1200px;
+    padding-top: 29px;
+    text-align: center;
+    .opinion_head {
+        color: $main-color;
+        text-align: start;
+    }
+    .opinion_input {
+        margin: 25px 0;
+    }
+    .el-textarea__inner{
+        min-height: 280px !important;
+    }
+    .sub {
+        padding: 10px 61px;
+        font-size: 20px;
+        margin: 20px 0 50px;
+    }
+
+    .ivu-btn-primary {
+        background-color: $main-color;
+        border-color: $main-color; 
+    }
+}

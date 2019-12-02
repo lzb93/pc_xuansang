@@ -1,0 +1,46 @@
+@import "../../assets/scss/global/variables";
+.design_wrap {
+  padding-top: $header-height;
+  text-align: center;
+  h2{
+    padding-top: 50px;
+    font-size: 32px;
+    font-weight: normal;
+    color: $color-gray-darker;
+    &.no_padding_top {
+      padding-top: 0;
+    }
+  }
+}
+.item_box{
+    width: $min-width;
+    margin: 105px auto 0;
+
+    .item_design {
+        position: relative;
+        width: 520px;
+        height: 250px;
+        border-radius: 10px;
+        border: 1px solid $border-bottom;
+        text-align: center;
+        margin:0 35px 120px;
+        & > img {
+          margin: 0 auto;
+          transform: translate(0, -50%);
+        }
+        p {
+          padding: 0 20px;
+          line-height: 30px;
+          color: #929292;
+        }
+        .btn_design {
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          transform: translate(-50%, 50%);
+          font-size: 16px;
+        }
+    }
+}
+
+
