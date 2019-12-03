@@ -710,18 +710,20 @@
             page: this.currentPage - 1,
             user_id: this.userInfo.user_id
           }
-          switch (type) {
-            case 'collect': this.userCollect(params)
-            break;
-            case 'upload': this.myUpload(Object.assign(params, {examine: this.myUploadActive}))
-            break;
-            case 'works': this.userWorks(worksParams)
-            break;
-            case 'download': this.userDownload(params)
-            break;
-            case 'vipCenter': this.userMember()
-            break;
-          }
+          // switch (type) {
+          //   case 'collect': this.userCollect(params)
+          //   break;
+          //   case 'upload': this.myUpload(Object.assign(params, {examine: this.myUploadActive}))
+          //   break;
+          //   case 'works': this.userWorks(worksParams)
+          //   break;
+          //   case 'download': this.userDownload(params)
+          //   break;
+          //   case 'vipCenter': this.userMember()
+          //   break;
+          // }
+          this.loading = false;
+
         },
         edit(type) {
           this.editType = type;

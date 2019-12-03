@@ -191,8 +191,9 @@
         loadings
       },
       async created() {
-        const { status, result, info } = await home()
         this.loading = false;
+        const { status, result, info } = await home()
+        
         if(status != 1) {
             return this.$Message(info, 'error')
         }

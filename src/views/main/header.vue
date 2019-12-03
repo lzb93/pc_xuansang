@@ -5,28 +5,36 @@
     <div class="mg_header flex_between">
       <div class="logo">
         <router-link :to="{path: '/'}">
-          <img style="display: block; height: 33px" src="../../assets/images/logo.png" alt="">
+          <!-- <img style="display: block; height: 33px" src="../../assets/images/logo.png" alt=""> -->
         </router-link>
       </div>
       <div class="header_nav flex_row">
         <div class="item_nav">
           <a href="javascript:;" class="nav_title">
             <span>设计创意</span>
+            <img class="nav_bg" v-if='result.sheji.length > 0' src="../../assets/images/icon_header_select.png" alt="">
+            <img class="nav_bg" v-if='result.sheji.length == 0' src="../../assets/images/icon_header_select1.png" alt="">
           </a>
         </div>
         <div class="item_nav">
           <a href="javascript:;" class="nav_title">
             <span>鉴赏提升</span>
+            <img class="nav_bg" v-if='result.sheji.length > 0' src="../../assets/images/icon_header_select.png" alt="">
+            <img class="nav_bg" v-if='result.sheji.length == 0' src="../../assets/images/icon_header_select1.png" alt="">
           </a>
         </div>
          <div class="item_nav">
           <a href="http://tutu.meigongpuzi.cn/#/index" class="nav_title" target="_blank">
             <span>在线设计</span>
+            <img class="nav_bg" v-if='result.sheji.length > 0' src="../../assets/images/icon_header_select.png" alt="">
+            <img class="nav_bg" v-if='result.sheji.length == 0' src="../../assets/images/icon_header_select1.png" alt="">
           </a>
         </div>
         <div class="item_nav">
           <a href="javascript:;" class="nav_title">
             <span>充值中心</span>
+            <img class="nav_bg" v-if='result.sheji.length > 0' src="../../assets/images/icon_header_select.png" alt="">
+            <img class="nav_bg" v-if='result.sheji.length == 0' src="../../assets/images/icon_header_select1.png" alt="">
           </a>
     
         </div>

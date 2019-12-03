@@ -139,7 +139,9 @@
         host: process.env.HOST,
         loading: true,
         active: 0,
-        list: [],
+        list: [
+           {'':''}
+        ],
         count: 1,
         currentPage: 1,
         orderStatus: {
@@ -155,24 +157,26 @@
     created() {
       const query = this.$route.query;
       this.currentPage = this.intePage;
-      this.product({page: this.currentPage - 1});
+      // this.product({page: this.currentPage - 1});
       this.refreshUser();
     },
     methods: {
       ...mapActions([ 'refreshUser', 'updateIntePage' ]),
       switchTab(index) {
         this.active = index;
+        this.loading = false;
         this.currentPage = 1;
         this.count = 1;
         this.list = [];
         if(index == 0) {
-          this.product({page: this.currentPage - 1});
+          
+          // this.product({page: this.currentPage - 1});
         }
         if(index == 1) {
-          this.getIncomeList({page: this.currentPage - 1});
+          // this.getIncomeList({page: this.currentPage - 1});
         }
         if(index == 2) {
-          this.exchangeRecord({page: this.currentPage - 1});
+          // this.exchangeRecord({page: this.currentPage - 1});
         }
       },
       toDetail(goodsId) {

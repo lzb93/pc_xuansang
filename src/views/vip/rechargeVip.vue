@@ -72,7 +72,7 @@
             <!-- 共享VIP -->
             <div class="ver_list gx left">
                 <p class="header" style="background-color:#E57213;color:#fff; border-top: 0">共享VIP</p>
-                <h1 class="how_maney ">{{parseInt(result[2].money || 0)}}<span>元</span></h1>
+                <h1 class="how_maney ">999<span>元</span></h1>
                 <p class="reduction">
                   <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-gou-copy2"></use>
@@ -81,10 +81,10 @@
                 <p class="reduction"><i class="iconfont">&#xe625;</i></p>
                 <p class="reduction"><i class="iconfont">&#xe625;</i></p>
                 <p>海量</p>
-                <p><img :src="result[2].icon" alt=""></p>
+                <p><img src="result[2].icon" alt=""></p>
                 <p><i class="iconfont">&#xe625;</i></p>
                 <div class="bottom_btn">
-                  <router-link :to="{name: 'recharge', query: {id: result[2].id}}">
+                  <router-link :to="{name: 'recharge', query: {id:88}}">
                     <div style="background-color: rgb(229, 114, 19);">
                         立即抢购
                     </div>
@@ -94,7 +94,7 @@
             <!-- 原创VIP -->
             <div class="ver_list gx left">
                 <p class="header" style="background-color:#56C61B;color:#fff; border-top: 0">原创VIP</p>
-                <h1 class="how_maney ">{{parseInt(result[1].money || 0)}}<span>元</span></h1>
+                <h1 class="how_maney ">999<span>元</span></h1>
                 <p class="reduction"><i class="iconfont">&#xe625;</i></p>
                 <p class="reduction">
                   <svg class="icon" aria-hidden="true">
@@ -103,10 +103,10 @@
                 </p>
                 <p class="reduction"><i class="iconfont">&#xe625;</i></p>
                 <p>海量</p>
-                <p><img :src="result[1].icon" alt=""></p>
+                <p><img src="result[1].icon" alt=""></p>
                 <p>个人作品商用</p>
                 <div class="bottom_btn">
-                  <router-link :to="{name: 'recharge', query: {id: result[1].id}}">
+                  <router-link :to="{name: 'recharge', query: {id: 33}}">
                     <div style="background-color:#56C61B;">
                         立即抢购
                     </div>
@@ -116,7 +116,7 @@
             <!-- 视频VIP -->
             <div class="ver_list gx left">
                 <p class="header" style="background-color:#09B6EC;color:#fff; border-top: 0">视频VIP</p>
-                <h1 class="how_maney ">{{parseInt(result[3].money || 0)}}<span>元</span></h1>
+                <h1 class="how_maney ">999<span>元</span></h1>
                 <p class="reduction"><i class="iconfont">&#xe625;</i></p>
                 <p class="reduction"><i class="iconfont">&#xe625;</i></p>
                 <p class="reduction">
@@ -125,10 +125,10 @@
                   </svg>
                 </p>
                 <p>海量</p>
-                <p><img :src="result[3].icon" alt=""></p>
+                <p><img src="result[3].icon" alt=""></p>
                 <p><i class="iconfont">&#xe625;</i></p>
                 <div class="bottom_btn">
-                  <router-link :to="{name: 'recharge', query: {id: result[3].id}}">
+                  <router-link :to="{name: 'recharge', query: {id:22}}">
                     <div>
                         立即抢购
                     </div>
@@ -143,21 +143,21 @@
     <div class="qz_and_qy clearfix">
         <div class="qz_vip left">
             <div class="qz_vip_top left">
-                <img style="margin-right: 20px;" :src="result[4].icon" alt="">
+                <img style="margin-right: 20px;" src="result[4].icon" alt="">
                 <span>全站VIP</span>
             </div>
             <p>共享+原创+视频</p>
-            <h1>{{parseInt(result[4].money || 0)}}<span style="font-size:14px;">元</span> </h1>
-            <router-link :to="{name: 'recharge', query: {id: result[4].id}}"><div class="qz_vip_btn">立即抢购</div></router-link>
+            <h1>999<span style="font-size:14px;">元</span> </h1>
+            <router-link :to="{name: 'recharge', query: {id: 111}}"><div class="qz_vip_btn">立即抢购</div></router-link>
         </div>
             <div class="qz_vip left">
             <div class="qz_vip_top left">
-                <img style="margin-right: 20px;" :src="result[5].icon" alt="">
+                <img style="margin-right: 20px;" src="result[5].icon" alt="">
                 <span>企业VIP</span>
             </div>
             <p>适用于团队及企业</p>
-            <h1>{{parseInt(result[5].money || 0)}}<span style="font-size:14px;">元</span> </h1>
-            <router-link :to="{name: 'recharge', query: {id: result[5].id}}"><div class="qz_vip_btn"> 立即抢购</div></router-link>
+            <h1>999<span style="font-size:14px;">元</span> </h1>
+            <router-link :to="{name: 'recharge', query: {id: 99}}"><div class="qz_vip_btn"> 立即抢购</div></router-link>
         </div>
     </div>
   </div>
@@ -171,19 +171,19 @@
         result: {}
       }
     },
-    async created() {
-      const { status, result, info } = await getMemberInfo()
-      if(status != 1) {
-        return this.$Message(info, 'error');
-      }
-      for(let i in result.vip_privilege) {
-        (result.list || []).forEach(item => {
-          if(item.privilege_type == i) {
-            result.vip_privilege[i].money = item.money;
-          }
-        })
-      }
-      this.result = result.vip_privilege;
-    }
+    // async created() {
+    //   const { status, result, info } = await getMemberInfo()
+    //   if(status != 1) {
+    //     return this.$Message(info, 'error');
+    //   }
+    //   for(let i in result.vip_privilege) {
+    //     (result.list || []).forEach(item => {
+    //       if(item.privilege_type == i) {
+    //         result.vip_privilege[i].money = item.money;
+    //       }
+    //     })
+    //   }
+    //   this.result = result.vip_privilege;
+    // }
   }
 </script>
